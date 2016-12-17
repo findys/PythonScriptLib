@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import optparse#解析命令行
+import optparse     #解析命令行
 import socket
 from socket import *
 
@@ -38,7 +38,7 @@ def main():
     parser.add_option('-p', dest = 'tgtPort', type = 'string', help = 'specify target port[s] separated by comma')
     (options, args) = parser.parse_args()
     tgtHost = options.tgtHost
-    tgtPorts = str(options.tgtPort).split(',') #通过','对输入的端口号切片
+    tgtPorts = str(options.tgtPort).split(',')      #通过','对输入的端口号切片
     if (tgtHost == None) | (tgtPorts[0] == None):
         print '[-] You must specify a target host and port[s].'
         exit(0)
